@@ -5,6 +5,8 @@
 // After the first variable, make a variable named farewell with a data type of string that says 'Goodbye' (with single quotes)
 
 // Code here
+const greeting = "Hi";
+const farewell = "Goodbye";
 
 ////////////////// PROBLEM 2 ////////////////////
 
@@ -13,12 +15,17 @@
 // Concatenate hello and userName together and store the result in a variable called salutation
 
 // Code here
+const hello = "Hello";
+const userName = "Cat";
+
+const salutation = hello + " " + userName;
 
 ////////////////// PROBLEM 3 ////////////////////
 
 // Create a variable called seven that has a number data type with the value of 7
 
 // Code here
+const seven = 7;
 
 ////////////////// PROBLEM 4 ////////////////////
 
@@ -26,20 +33,23 @@
 // This datatype should be a number
 
 // Code here
+const money = 10000;
 
 ////////////////// PROBLEM 5 ////////////////////
 
 // Make a variable called awesome and give it a value of the boolean data type true
 
 // Code here
+const awesome = true;
 
 ////////////////// PROBLEM 6 ////////////////////
 
 // Do not edit the code below.
-let myCar = 'Jeep';
+let myCar = "Jeep";
 // Do not edit the code above.
 
 // Set the variable myCar to be null
+myCar = null;
 
 // Code here
 
@@ -49,7 +59,12 @@ let myCar = 'Jeep';
 // Each item should be an object, and each object should have 2 properties: name (string) and age (number)
 
 // Code here
-
+const users = [
+  { name: "Cat", age: 22 },
+  { name: "Sam", age: 19 },
+  { name: "Drew", age: 16 },
+  { name: "Abi", age: 22 },
+];
 ////////////////// PROBLEM 8 ////////////////////
 
 // Create a variable called family which should be an object
@@ -58,6 +73,11 @@ let myCar = 'Jeep';
 // Each hobbies property will have a corresponding value which will be an object
 
 // Code here
+const family ={
+  Cat:{hobbies:{gaming:{okay: "gamer"}}},
+  Sam:{hobbies:{gaming:{okay: "gamer"}}},
+  Drew:{hobbies:{gaming:{okay: "gamer"}}}
+}
 
 ////////////////// PROBLEM 9 ////////////////////
 
@@ -65,6 +85,11 @@ let myCar = 'Jeep';
 // Each item should be an array with 2 items (numbers) in each array
 
 // Code here
+const gameScores = [
+  [345, 45],
+  [567, 89],
+  [234, 784],
+];
 
 ////////////////// PROBLEM 10 ////////////////////
 
@@ -72,6 +97,26 @@ let myCar = 'Jeep';
 // Each object should have 3 properties: name (string), gender (string), height (number) in each array
 
 // Code here
+const obj1={
+  name: "Cat",
+  gender: "F",
+  height: 5.5
+}
+const obj2={
+  name: "Cat",
+  gender: "F",
+  height: 5.5
+}
+const obj3={
+  name: "Cat",
+  gender: "F",
+  height: 5.5
+}
+const people = [
+  obj1,
+  obj2,
+  obj3
+]
 
 ////////////////// PROBLEM 11 ////////////////////
 
@@ -79,12 +124,17 @@ let myCar = 'Jeep';
 // This object should have 3 properties: name (string), state (string), favoriteCountrySong (string)
 
 // Code here
+const cowboy ={
+  name: "Dallas",
+  state: "Texas",
+  favoriteCountrySong: "Sweet Home Alabama"
+}
 
 ////////////////// PROBLEM 12 ////////////////////
 
 // Do not edit the code below.
 const spaceship = {
-  fuel: 'liquid hydrogen',
+  fuel: "liquid hydrogen",
   topSpeed: 36000,
   fuelLevel: 100,
   altitude: 0,
@@ -105,13 +155,14 @@ function launch() {
 //   the function launch (provided for you)
 
 // Code here
+const dataTypes = [42, "meaning", true, [1, 2, 3, 4, 5], spaceship, launch];
 
 ////////////////// PROBLEM 13 ////////////////////
 
 // Edit the function called "sum" so that when it is invoked, it returns the sum of its parameters num1 and num2
 
 function sum(num1, num2) {
-  return; // Code here
+  return num1 + num2; // Code here
 }
 
 ////////////////// PROBLEM 14 ////////////////////
@@ -119,30 +170,32 @@ function sum(num1, num2) {
 // Create two variables number1 and number2 and assign them number values
 
 // Code here
+const number1 = 1;
+const number2 = 2;
 
 // Next, edit the function called "multiply" so that when it is invoked, it returns the result of multiplying number1 and number2
 
 function multiply() {
-  return; // Code here
+  return number1 * number2; // Code here
 }
 
 ////////////////// PROBLEM 15 ////////////////////
 
 // Do not edit the code below.
-let food = 'pizza';
+let food = "pizza";
 // Do not edit the code above.
 
 // Edit the function favFood so that when it is invoked it returns the string "My favorite food is pizza"
 // In your solution code, use template strings (not concatenation) and use the food variable provided
 
 function favFood() {
-  return; // Code here
+  return `My favorite food is ${food}`; // Code here
 }
 
 ////////////////// PROBLEM 16 ////////////////////
 
 // Do not edit the code below.
-let theName = 'Jeremy';
+let theName = "Jeremy";
 let theBoss;
 // Do not edit the code above.
 
@@ -150,16 +203,16 @@ let theBoss;
 // the function assigns the value of theName to theBoss variable
 
 function assignName(name) {
-  // Code here
+  theBoss = name
 }
 
 ////////////////// PROBLEM 17 ////////////////////
 
 // Do not edit the code below.
 const user = {
-  name: 'Billy',
+  name: "Billy",
   age: 18,
-  email: 'billy123@billy.com',
+  email: "billy123@billy.com",
 };
 // Do not edit the code above.
 
@@ -167,7 +220,7 @@ const user = {
 // edit the function getName so that it accesses the name property of the user object and returns its value
 
 function getName(userObj) {
-  return; // Code here
+  return userObj.name
 }
 
 ////////////////// PROBLEM 18 ////////////////////
@@ -175,23 +228,31 @@ function getName(userObj) {
 // Do not edit the code below."
 const calendar = {
   months: [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December',
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
   ],
-  weekDays: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+  weekDays: [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ],
   days: [
-    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
-    27, 28, 29, 30, 31,
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
+    22, 23, 24, 25, 26, 27, 28, 29, 30, 31,
   ],
 };
 // Do not edit the code above.
@@ -202,7 +263,7 @@ const calendar = {
 // Make sure you are accessing it from the weekDays array of the calendar object
 
 function getWeekDay(calendar) {
-  return; // Code here
+  return calendar.weekDays[2];
 }
 
 ////////////////// PROBLEM 19 ////////////////////
@@ -210,30 +271,42 @@ function getWeekDay(calendar) {
 // Create a function called "fn" that takes in a parameter and returns that parameter
 
 // Code here
+function fn(name) {
+  return name;
+}
 
 ////////////////// PROBLEM 20 ////////////////////
 
 // Do not edit the code below.
-let firstName = 'Indiana';
-let lastName = 'Jones';
+let firstName = "Indiana";
+let lastName = "Jones";
 // Do not edit the code above.
 
 // Create a function called createName that takes in no parameters and returns the result of concatenating firstName and lastName (provided)
 // The returned value should include a space between the first and last names and should use concatenation (not template strings)
 
 // Code here
+function createName(){
+  return firstName + " " + lastName;
+}
 
 ////////////////// PROBLEM 21 ////////////////////
 
 // Create a function called showMeSeven that returns the number 7
 
 // Code here
+function showMeSeven(){
+  return 7
+}
 
 ////////////////// PROBLEM 22 ////////////////////
 
 // Create a function called multiplier that takes two parameters (numbers) and returns the product of the two parameters
 
 // Code here
+function multiplier(num1,num2){
+  return num1 * num2
+}
 
 ////////////////// PROBLEM 23 ////////////////////
 
@@ -242,6 +315,9 @@ let lastName = 'Jones';
 // The returned value should include a space between the greeting and name parameters
 
 // Code here
+function sayHello(greeting,name){
+  return greeting + " " + name
+}
 
 ////////////////// PROBLEM 24 ////////////////////
 
@@ -251,11 +327,14 @@ let lastName = 'Jones';
 // the second property should be duration with the value of the second parameter
 
 // Code here
+function makeExercise(exerciseName,duration){
+  return {exerciseName:exerciseName,duration:duration}
+}
 
 ////////////////// PROBLEM 25 ////////////////////
 
 // Do not edit the code below.
-let age = 'TBD';
+let age = "TBD";
 // Do not edit the code above.
 
 // Inside the isOldEnough function, write an if/else statement that will return "old enough" if the age variable is greater than 21 and returns "not yet" otherwise
@@ -263,13 +342,16 @@ let age = 'TBD';
 // The variable age will be changed during testing
 
 function isOldEnough() {
-  // Code here
+  if (age > 21){
+  return "old enough"
+  }
+  return "not yet"
 }
 
 ////////////////// PROBLEM 26 ////////////////////
 
 // Do not edit the code below.
-let workEthic = 'TBD';
+let workEthic = "TBD";
 // Do not edit the code above.
 
 // Inside the successPredictor function, write an if/else statement that will return "success at DevMountain" if the workEthic variable is "great" and returns "failure at DevMountain" otherwise
@@ -277,13 +359,16 @@ let workEthic = 'TBD';
 // The variable workEthic will be changed during testing
 
 function successPredictor() {
-  // Code here
+  if (workEthic === "great"){
+    return "success at DevMountain"
+  } else {
+    return "failure at DevMountain"};
 }
 
 ////////////////// PROBLEM 27 ////////////////////
 
 // Do not edit the code below.
-let cookieType = 'TBD';
+let cookieType = "TBD";
 // Do not edit the code above.
 
 // Inside the eatOrTrash function, write an if/else statement that will return "throw in trash" if the cookieType variable is "raisin" and returns "eat" otherwise
@@ -291,14 +376,17 @@ let cookieType = 'TBD';
 // The variable cookieType will be changed during testing
 
 function eatOrTrash() {
-  // Code here
+  if (cookieType === "raisin"){
+    return "throw in trash"
+  }
+  return "eat"
 }
 
 ////////////////// PROBLEM 28 ////////////////////
 
 // Do not edit the code below.
-let myTeamScore = 'TBD';
-let yourTeamScore = 'TBD';
+let myTeamScore = "TBD";
+let yourTeamScore = "TBD";
 // Do not edit the code above.
 
 // Inside the finalScore function, write an if/else statement that will return "we are the champions" if the myTeamScore variable is greater than the yourTeamScore variable and returns ":(" otherwise
@@ -306,13 +394,18 @@ let yourTeamScore = 'TBD';
 // The myTeamScore and yourTeamScore variables will be changed during testing
 
 function finalScore() {
-  // Code here
+  if (myTeamScore > yourTeamScore){
+    return "we are the champions"
+  }
+  else {
+    return ":("
+  }
 }
 
 ////////////////// PROBLEM 29 ////////////////////
 
 // Do not edit the code below.
-age = 'TBD';
+age = "TBD";
 // Do not edit the code above.
 
 // Inside the findCorrectTransportation function, write an if/else statement that will check the age variable and return the correct response according to the following criteria:
@@ -324,14 +417,25 @@ age = 'TBD';
 // The variable age will always be a number and will be changed during testing
 
 function findCorrectTransportation() {
-  // Code here
+  if (age <3){
+    return 
+  }
+  if (age <8){
+    return "tricycle"
+  }
+  if (age <16){
+    return "bicycle"
+  }
+  if (age >15){
+    return "car"
+  }
 }
 
 ////////////////// PROBLEM 30 ////////////////////
 
 // Do not edit the code below.
-let cash = 'TBD';
-let temp = 'TBD';
+let cash = "TBD";
+let temp = "TBD";
 // Do not edit the code above.
 
 // Inside the doIGetIceCream function, write an if/else statement that will check the cash and temp variables and return the correct response according to the following criteria:
@@ -342,14 +446,17 @@ let temp = 'TBD';
 // The variable age will always be a number and will be changed during testing
 
 function doIGetIceCream() {
-  // Code here
+  if (temp === "hot" && cash){
+    return "Get Ice Cream!"
+  }
+  return "Save up for another day."
 }
 
 ////////////////// PROBLEM 31 ////////////////////
 
 // Do not edit the code below.
-let chores = 'TBD';
-let work = 'TBD';
+let chores = "TBD";
+let work = "TBD";
 // Do not edit the code above.
 
 // Inside the doIHaveFreeTime function, write an if/else statement that return "free time!" if either chores or work are false
@@ -359,15 +466,17 @@ let work = 'TBD';
 // The chores and work variables will always be true or false and will be changed during testing
 
 function doIHaveFreeTime() {
-  // Code here
+  if (!chores || !work){
+    return "free time!"
+  }
 }
 
 ////////////////// PROBLEM 32 ////////////////////
 
 // Do not edit the code false.
 let crash = false;
-let currentSpeed = 'TBD';
-let brakes = 'TBD';
+let currentSpeed = "TBD";
+let brakes = "TBD";
 // Do not edit the code above.
 
 // Inside the setCrash function, write an if/else statement that will set the value of crash to true if currentSpeed is "fast" and brakes is false and does nothing otherwise
@@ -378,14 +487,17 @@ let brakes = 'TBD';
 // The brakes variables will always be a boolean and will be changed during testing
 
 function setCrash() {
-  // Code here
+  if (currentSpeed === "fast" && !brakes){
+    return (crash = true)
+  }
+  return
 }
 
 ////////////////// PROBLEM 33 ////////////////////
 
 // Do not edit the code below.
 let user2 = {
-  name: 'Tiffany',
+  name: "Tiffany",
   total: 50,
 };
 // Do not edit the code above.
@@ -398,6 +510,13 @@ let user2 = {
 // The arguments passed into makePurchase will always be numbers and will be changed during testing
 
 // Code here
+function makePurchase(priceOfItem) {
+  if (priceOfItem <= user2.total) {
+    user2.total = user2.total - priceOfItem;
+  } else {
+    return "not enough funds";
+  }
+}
 
 ////////////////// PROBLEM 34 ////////////////////
 
@@ -406,13 +525,13 @@ var hunger;
 var fatigue;
 
 function eat() {
-  hunger = 'gone';
-  return 'yum yum';
+  hunger = "gone";
+  return "yum yum";
 }
 
 function sleep() {
-  fatigue = 'gone';
-  return 'zzz zzz zzz';
+  fatigue = "gone";
+  return "zzz zzz zzz";
 }
 // Do not edit the code above.
 
@@ -426,3 +545,12 @@ function sleep() {
 // The arguments passed into decisionMaker will always be true or false and will be changed during testing
 
 // Code here
+function decisionMaker(hungry, tired) {
+  if (hungry === true && tired === false) {
+    return eat();
+  } else if (hungry === false && tired === true) {
+    return sleep();
+  } else {
+    return "undecided";
+  }
+}
